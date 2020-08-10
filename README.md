@@ -29,9 +29,9 @@ And for each of the members I should see:
 ```
 ### Versions
 
-Ruby 2.5.3
+Rails 5.2.4.3
 
-Rails 5.1.7
+Ruby 2.5.3
 
 ### Setup
 
