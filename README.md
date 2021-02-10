@@ -20,6 +20,5 @@ Ruby 2.5.3
 
 - Clone this repo
 - `bundle install`
-- `bundle exec figaro install`
 - `rails db:{create,migrate}`
 - `rails s`
