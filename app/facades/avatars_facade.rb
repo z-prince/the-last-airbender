@@ -1,9 +1,9 @@
 class AvatarsFacade
-  def self.nation_members
-    top_movies = MoviesService.get_top_rated
+  def self.nation_members(keyword)
+    members = AvatarsService.get_all_nation_members(keyword)
 
-    top_movies[0..39].map do |movie|
-      Movie.new(movie)
+    members.map do |member|
+      Avatar.new(member)
     end
   end
 end
