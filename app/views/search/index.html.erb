@@ -1,0 +1,29 @@
+<h1><%= @nation_name %></h1>
+
+<br>
+<div id='totalMembers'>
+<h3>Total Members: </h3><%= @nation_members.count %>
+</div>
+<br>
+____________________________________________________________________________
+<br>
+<br>
+
+<% @nation_members[0..24].each do |member| %>
+  <img src="<%= member.photo unless member.photo.nil? %>" alt="<%= member.name %>">
+  <h4>Name: </h4><%= member.name %>
+  <h4>Allies: </h4><% if member.allies %>
+                        <%= member.allies.split.join(', ') %>
+                      <% else %>
+                        <%= 'None' %>
+                      <% end %>
+  <h4>Enemies: </h4><% if member.enemies%>
+                        <%= member.enemies.split.join(', ') %>
+                      <% else %>
+                        <%= 'None' %>
+                      <% end %>
+  <h4>Affiliations: </h4><%= member.affiliations %>
+<br>
+<br>
+<br>
+<% end %>
