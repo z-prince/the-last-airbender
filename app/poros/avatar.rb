@@ -6,8 +6,8 @@ class Avatar
 
   def initialize(data)
     @name = data[:name]
-    @photo = data[:photo] unless data[:photo].nil?
+    @photo = data[:photoUrl] unless data[:photoUrl].nil?
     @allies = data[:allies]
-    @affiliations = data[:affiliations] unless data[:affiliations].nil?
+    @affiliations = data[:affiliation] unless data[:affiliation].nil?
   end
 end
