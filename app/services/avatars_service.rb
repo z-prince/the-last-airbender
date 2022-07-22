@@ -2,6 +2,8 @@ class AvatarsService
   def self.get_url(url, keyword = nil)
     conn = Faraday.new(url: 'https://last-airbender-api.herokuapp.com/') do |faraday|
       faraday.params[:affiliation] = keyword unless keyword.nil?
+      faraday.params[:perPage] = 100
+      faraday.params[:page] = 1
     end
 
     response = conn.get(url)
