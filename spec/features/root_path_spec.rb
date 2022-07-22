@@ -4,7 +4,7 @@ RSpec.describe 'root path' do
   it 'can search for members' do
     visit root_path
 
-    select 'Fire Nation', from: 'select-field'
+    select 'Fire Nation', from: :nation
 
     click_on('Search For Members')
 
