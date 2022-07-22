@@ -9,7 +9,7 @@ RSpec.describe 'search index' do
     click_on('Search For Members')
 
     expect(current_path).to eq('/search')
-    save_and_open_page
+
     within '#totalMembers' do
       expect(page).to have_content(97)
     end
