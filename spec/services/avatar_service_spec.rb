@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe AvatarsService do
   it '#gets all the characters' do
-    parsed_json = AvatarsService.get_all_characters
+    parsed_json = AvatarsService.get_all_nation_members('Fire Nation')
 
     expect(parsed_json).to be_a Array
 
@@ -11,7 +11,7 @@ RSpec.describe AvatarsService do
 
     parsed_json.each do |avatar|
       expect(avatar[:allies]).to be_a Array
-      expect(avatar[:affiliation]).to be_a String unless avatar[:affiliation].nil?
+      expect(avatar[:affiliation]).to include('Fire Nation')
       expect(avatar[:name]).to be_a String
       expect(avatar[:enemies]).to be_a Array
     end
